@@ -59,6 +59,14 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
 				JMenuItem    item;
         		mainMenu = new JMenu("Profiles");
         		
-			}//End of "		 
+        		item = new JMenuItem("Create a Profile");       
+       		 	item.addActionListener(this);
+       		 	mainMenu.add(item);
+       		 	
+       		 	item = new JMenuItem("Quit Netclicks");       
+       		 	item.addActionListener(this);
+       		 	mainMenu.add(item);
+        		
+			}//End of "createNetclicksMainMenu" Method		 
 		
 }//End of "NetclicksMainMenu" class.
