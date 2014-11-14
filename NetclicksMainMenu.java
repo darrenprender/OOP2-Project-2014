@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class NetclicksMainMenu extends JFrame implements ActionListener {
 	
-	JMenu menuBar;
+	JMenu mainMenu;
 	JLabel startupMessage;
 	Container contentPane;
 	
@@ -13,13 +13,13 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
 		{
 			NetclicksMainMenu mMFrame = new NetclicksMainMenu();
 			mMFrame.setVisible(true);
-			mMFrame.setExtendedState(JFrame.MAXISMIZED_BOTH);
+			mMFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 			
 		}//End of Main
 		
 	public NetclicksMainMenu()
 		{
-			setTitle("NETCLICKS - Main Menu");
+			setTitle("Netclicks - Main Menu");
 			setSize(400,200);
 			setResizable(true);
 			setLocation(500,300);
@@ -30,9 +30,14 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
         	
         	createNetclicksMainMenu();
         	
-        	response = new JLabel("No Profile Selected");
-        	response.setSize(250,50);
-        	contentPane.add(response);
+        	JMenuBar menuBar = new JMenuBar();
+        	setJMenuBar(menuBar);
+        	
+        	menuBar.add(mainMenu);
+        	
+        	startupMessage = new JLabel("No Profile Selected");
+        	startupMessage.setSize(250,50);
+        	contentPane.add(startupMessage);
 			
 		}//End of "mMFrame" Method
 		
@@ -45,13 +50,15 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
         			{
            				System.exit(0);
            				
-        			}//End of "if" statement
+        			}//End of "if" statement.
+       
+		}//End of "actionPerformed" Method.	
+		
+	private void createNetclicksMainMenu() 
+			{
+				JMenuItem    item;
+        		mainMenu = new JMenu("Profiles");
         		
-        		else if(menuName.equals("Friend 1 - John Lad"))
-        			{
-        				response.setText("Menu Item '" + menuName + "' is selected.");
-        				contentPane.setBackground(Color.orange);
-        				
-        			}//End of "else if" statement			 
+			}//End of "		 
 		
 }//End of "NetclicksMainMenu" class.
