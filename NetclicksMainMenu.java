@@ -128,7 +128,6 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	
        		 		//"Horror" Submenu
        		 			
-       		 			
        		 			JMenuItem theShining = new JMenuItem("The Shining");
        		 			horrorMovMenu.add(theShining);
        		 			
@@ -150,6 +149,8 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	comedyMovMenu.addActionListener(this);
        		 	movieMenu.add(comedyMovMenu);
        		 	
+       		 		//"Comedies" SubMenu
+       		 	
        		 			JMenuItem theHangover = new JMenuItem("The Hangover");
        		 			comedyMovMenu.add(theHangover);
        		 			
@@ -164,10 +165,14 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			
        		 			JMenuItem shaunOfTheDead = new JMenuItem("Shaun of the Dead");
        		 			comedyMovMenu.add(shaunOfTheDead);
+       		 			
+       		 		//End of "Comedies" SubMenu
        		 	
        		 	dramaMovMenu = new JMenu("Drama");
        		 	dramaMovMenu.addActionListener(this);
        		 	movieMenu.add(dramaMovMenu);
+       		 	
+       		 		//"Drama" SubMenu
        		 	
        		 			JMenuItem shawshankRedemption = new JMenuItem("Shawshank Redemption");
        		 			dramaMovMenu.add(shawshankRedemption);
@@ -183,10 +188,14 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			
        		 			JMenuItem fightClub = new JMenuItem("Fight Club");
        		 			dramaMovMenu.add(fightClub);
+       		 		
+       		 		//End of "Drama" SubMenu
        		 	
        		 	romanceMovMenu = new JMenu("Romance");
        		 	romanceMovMenu.addActionListener(this);
        		 	movieMenu.add(romanceMovMenu);
+       		 	
+       		 		//"Romance" SubMenu
        		 	
        		 			JMenuItem titanic = new JMenuItem("Titanic");
        		 			romanceMovMenu.add(titanic);
@@ -202,10 +211,14 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			
        		 			JMenuItem forgettingSarahMarshall = new JMenuItem("Forgetting Sarah Marshall");
        		 			romanceMovMenu.add(forgettingSarahMarshall);
+       		 			
+       		 		//End of "Romance" SubMenu
        		 	
        		 	sciFiMovMenu = new JMenu("Science Fiction");
        		 	sciFiMovMenu.addActionListener(this);
        		 	movieMenu.add(sciFiMovMenu);
+       		 	
+       		 		//"Science Fiction" SubMenu
        		 	
        		 			JMenuItem alien = new JMenuItem("Alien");
        		 			sciFiMovMenu.add(alien);
@@ -221,10 +234,14 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			
        		 			JMenuItem avatar = new JMenuItem("Avatar");
        		 			sciFiMovMenu.add(avatar);
+       		 			
+       		 		//End of "Science Fiction" SubMenu
        		 	
        		 	kidsMovMenu = new JMenu("Kids");
        		 	kidsMovMenu.addActionListener(this);
        		 	movieMenu.add(kidsMovMenu);
+       		 	
+       		 		//"Kids" SubMenu
        		 	
        		 			JMenuItem toyStory = new JMenuItem("Toy Story");
        		 			kidsMovMenu.add(toyStory);
@@ -240,6 +257,8 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			
        		 			JMenuItem frozen = new JMenuItem("Frozen");
        		 			kidsMovMenu.add(frozen);
+       		 			
+       		 		//End of "Kids" Submenu
         		
 			}//End of "createNetclicksMainMenu" Method		 
 		
