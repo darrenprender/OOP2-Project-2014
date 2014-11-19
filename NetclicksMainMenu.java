@@ -90,55 +90,155 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 
        		 //Creating the "Movies" JMenu
        		 	
-       		 	JMenuItem movMenu;
+       		 	JMenuItem actionMovMenu;
+       		 	JMenuItem horrorMovMenu;
+       		 	JMenuItem comedyMovMenu;
+       		 	JMenuItem dramaMovMenu;
+       		 	JMenuItem romanceMovMenu;
+       		 	JMenuItem sciFiMovMenu;
+       		 	JMenuItem kidsMovMenu;
        		 	movieMenu = new JMenu("Movies");
        		 	
-       		 	movMenu = new JMenu("Action");
-       		 	movMenu.addActionListener(this);
-       		 	movieMenu.add(movMenu);
+       		 	actionMovMenu = new JMenu("Action");
+       		 	actionMovMenu.addActionListener(this);
+       		 	movieMenu.add(actionMovMenu);
        		 		
        		 		//"Action" SubMenu
        		 		
        		 			JMenuItem dieHard = new JMenuItem("Die Hard");
-       		 			movMenu.add(dieHard);
+       		 			actionMovMenu.add(dieHard);
        		 			
        		 			JMenuItem lethalWeapon = new JMenuItem("Lethal Weapon");
-       		 			movMenu.add(lethalWeapon);
+       		 			actionMovMenu.add(lethalWeapon);
        		 			
        		 			JMenuItem pointBreak = new JMenuItem("Point Break");
-       		 			movMenu.add(pointBreak);
+       		 			actionMovMenu.add(pointBreak);
        		 			
        		 			JMenuItem theMatrix = new JMenuItem("The Matrix");
-       		 			movMenu.add(theMatrix);
+       		 			actionMovMenu.add(theMatrix);
        		 			
        		 			JMenuItem theBourneIdentidy = new JMenuItem("The Bourne Identidy");
-       		 			movMenu.add(theBourneIdentidy);
+       		 			actionMovMenu.add(theBourneIdentidy);
        		 			
        		 		//End "Action" Submenu
        		 	
-       		 	movMenu = new JMenuItem("Horror");
-       		 	movMenu.addActionListener(this);
-       		 	movieMenu.add(movMenu);
+       		 	horrorMovMenu = new JMenu("Horror");
+       		 	horrorMovMenu.addActionListener(this);
+       		 	movieMenu.add(horrorMovMenu);
        		 	
-       		 	movMenu = new JMenuItem("Comedies");
-       		 	movMenu.addActionListener(this);
-       		 	movieMenu.add(movMenu);
+       		 		//"Horror" Submenu
+       		 			
+       		 			JMenuItem theExorcist = new JMenuItem("The Exorcist");
+       		 			horrorMovMenu.add(theExorcist);
+       		 			
+       		 			JMenuItem evilDead = new JMenuItem("Evil Dead");
+       		 			horrorMovMenu.add(evilDead);
+       		 			
+       		 			JMenuItem theShining = new JMenuItem("The Shining");
+       		 			horrorMovMenu.add(theShining);
+       		 			
+       		 			JMenuItem fridayThe13 = new JMenuItem("Friday the 13th");
+       		 			horrorMovMenu.add(fridayThe13);
+       		 			
+       		 			JMenuItem saw = new JMenuItem("Saw");
+       		 			horrorMovMenu.add(saw);
+       		 		
+       		 		//End of "Horror" Submenu	
        		 	
-       		 	movMenu = new JMenuItem("Drama");
-       		 	movMenu.addActionListener(this);
-       		 	movieMenu.add(movMenu);
+       		 	comedyMovMenu = new JMenu("Comedies");
+       		 	comedyMovMenu.addActionListener(this);
+       		 	movieMenu.add(comedyMovMenu);
        		 	
-       		 	movMenu = new JMenuItem("Romance");
-       		 	movMenu.addActionListener(this);
-       		 	movieMenu.add(movMenu);
+       		 			JMenuItem theHangover = new JMenuItem("The Hangover");
+       		 			comedyMovMenu.add(theHangover);
+       		 			
+       		 			JMenuItem anchorman = new JMenuItem("Anchorman");
+       		 			comedyMovMenu.add(anchorman);
+       		 			
+       		 			JMenuItem dumbAndDumber = new JMenuItem("Dumb and Dumber");
+       		 			comedyMovMenu.add(dumbAndDumber);
+       		 			
+       		 			JMenuItem superbad = new JMenuItem("Superbad");
+       		 			comedyMovMenu.add(superbad);
+       		 			
+       		 			JMenuItem shaunOfTheDead = new JMenuItem("Shaun of the Dead");
+       		 			comedyMovMenu.add(shaunOfTheDead);
        		 	
-       		 	movMenu = new JMenuItem("Science Fiction");
-       		 	movMenu.addActionListener(this);
-       		 	movieMenu.add(movMenu);
+       		 	dramaMovMenu = new JMenu("Drama");
+       		 	dramaMovMenu.addActionListener(this);
+       		 	movieMenu.add(dramaMovMenu);
        		 	
-       		 	movMenu = new JMenuItem("Kids");
-       		 	movMenu.addActionListener(this);
-       		 	movieMenu.add(movMenu);
+       		 			JMenuItem shawshankRedemption = new JMenuItem("Shawshank Redemption");
+       		 			dramaMovMenu.add(shawshankRedemption);
+       		 			
+       		 			JMenuItem forestGump = new JMenuItem("Forest Gump");
+       		 			dramaMovMenu.add(forestGump);
+       		 			
+       		 			JMenuItem captainPhilips = new JMenuItem("Captain Philips");
+       		 			dramaMovMenu.add(captainPhilips);
+       		 			
+       		 			JMenuItem shindlersList = new JMenuItem("Shindler's List");
+       		 			dramaMovMenu.add(shindlersList);
+       		 			
+       		 			JMenuItem fightClub = new JMenuItem("Fight Club");
+       		 			dramaMovMenu.add(fightClub);
+       		 	
+       		 	romanceMovMenu = new JMenu("Romance");
+       		 	romanceMovMenu.addActionListener(this);
+       		 	movieMenu.add(romanceMovMenu);
+       		 	
+       		 			JMenuItem titanic = new JMenuItem("Titanic");
+       		 			romanceMovMenu.add(theExorcist);
+       		 			
+       		 			JMenuItem theNotebook = new JMenuItem("The Notebook");
+       		 			romanceMovMenu.add(theNotebook);
+       		 			
+       		 			JMenuItem dirtyDancing = new JMenuItem("dirtyDancing");
+       		 			romanceMovMenu.add(dirtyDancing);
+       		 			
+       		 			JMenuItem silverLiningsPlaybook = new JMenuItem("Silver Linings Playbook");
+       		 			romanceMovMenu.add(silverLiningsPlaybook);
+       		 			
+       		 			JMenuItem forgettingSarahMarshall = new JMenuItem("Forgetting Sarah Marshall");
+       		 			romanceMovMenu.add(forgettingSarahMarshall);
+       		 	
+       		 	sciFiMovMenu = new JMenu("Science Fiction");
+       		 	sciFiMovMenu.addActionListener(this);
+       		 	movieMenu.add(sciFiMovMenu);
+       		 	
+       		 			JMenuItem alien = new JMenuItem("Alien");
+       		 			sciFiMovMenu.add(alien);
+       		 			
+       		 			JMenuItem planetOfTheApes = new JMenuItem("Planet Of The Apes");
+       		 			sciFiMovMenu.add(planetOfTheApes);
+       		 			
+       		 			JMenuItem starWars = new JMenuItem("Star Wars");
+       		 			sciFiMovMenu.add(evilDead);
+       		 			
+       		 			JMenuItem backToTheFuture = new JMenuItem("Back To The Future");
+       		 			sciFiMovMenu.add(backToTheFuture);
+       		 			
+       		 			JMenuItem avatar = new JMenuItem("Avatar");
+       		 			sciFiMovMenu.add(avatar);
+       		 	
+       		 	kidsMovMenu = new JMenu("Kids");
+       		 	kidsMovMenu.addActionListener(this);
+       		 	movieMenu.add(kidsMovMenu);
+       		 	
+       		 			JMenuItem toyStory = new JMenuItem("Toy Story");
+       		 			kidsMovMenu.add(toyStory);
+       		 			
+       		 			JMenuItem findingNemo = new JMenuItem("Finding Nemo");
+       		 			kidsMovMenu.add(findingNemo);
+       		 			
+       		 			JMenuItem theLionKing = new JMenuItem("The Lion King");
+       		 			kidsMovMenu.add(theLionKing);
+       		 			
+       		 			JMenuItem iceAge = new JMenuItem("Ice Age");
+       		 			kidsMovMenu.add(iceAge);
+       		 			
+       		 			JMenuItem frozen = new JMenuItem("Frozen");
+       		 			kidsMovMenu.add(frozen);
         		
 			}//End of "createNetclicksMainMenu" Method		 
 		
