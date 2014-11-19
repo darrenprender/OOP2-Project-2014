@@ -128,11 +128,6 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	
        		 		//"Horror" Submenu
        		 			
-       		 			JMenuItem theExorcist = new JMenuItem("The Exorcist");
-       		 			horrorMovMenu.add(theExorcist);
-       		 			
-       		 			JMenuItem evilDead = new JMenuItem("Evil Dead");
-       		 			horrorMovMenu.add(evilDead);
        		 			
        		 			JMenuItem theShining = new JMenuItem("The Shining");
        		 			horrorMovMenu.add(theShining);
@@ -143,6 +138,12 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			JMenuItem saw = new JMenuItem("Saw");
        		 			horrorMovMenu.add(saw);
        		 		
+       		 			JMenuItem theExorcist = new JMenuItem("The Exorcist");
+       		 			horrorMovMenu.add(theExorcist);
+       		 			
+       		 			JMenuItem evilDead = new JMenuItem("Evil Dead");
+       		 			horrorMovMenu.add(evilDead);
+       		 			
        		 		//End of "Horror" Submenu	
        		 	
        		 	comedyMovMenu = new JMenu("Comedies");
@@ -188,7 +189,7 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	movieMenu.add(romanceMovMenu);
        		 	
        		 			JMenuItem titanic = new JMenuItem("Titanic");
-       		 			romanceMovMenu.add(theExorcist);
+       		 			romanceMovMenu.add(titanic);
        		 			
        		 			JMenuItem theNotebook = new JMenuItem("The Notebook");
        		 			romanceMovMenu.add(theNotebook);
@@ -213,7 +214,7 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			sciFiMovMenu.add(planetOfTheApes);
        		 			
        		 			JMenuItem starWars = new JMenuItem("Star Wars");
-       		 			sciFiMovMenu.add(evilDead);
+       		 			sciFiMovMenu.add(starWars);
        		 			
        		 			JMenuItem backToTheFuture = new JMenuItem("Back To The Future");
        		 			sciFiMovMenu.add(backToTheFuture);
