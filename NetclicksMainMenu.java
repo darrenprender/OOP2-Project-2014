@@ -57,7 +57,7 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
         		
         		if(optionSelected.equals("Create a Profile"))
         			{
-        				
+        				//Instanciate "CreateAProfile" class
         			}
         			
         	/*	if(optionSelected.equals("Edit a Profile"))
