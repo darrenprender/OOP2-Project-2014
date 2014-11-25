@@ -47,15 +47,34 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
 		
 	public void actionPerformed(ActionEvent event)
 		{
-        	String  profileSelected;
-        	profileSelected = event.getActionCommand();
+        	String  optionSelected;
+        	optionSelected = event.getActionCommand();
         		
-        		if(profileSelected.equals("Quit Netclicks"))
+        		if(optionSelected.equals("Select a Profile"))
+        			{
+        				
+        			}
+        		
+        		if(optionSelected.equals("Create a Profile"))
+        			{
+        				
+        			}
+        			
+        	/*	if(optionSelected.equals("Edit a Profile"))
+        			{
+        				
+        			}	*/
+        			
+        		if(optionSelected.equals("Delete a Profile"))
+        			{
+        				
+        			}
+        		
+        		if(optionSelected.equals("Quit Netclicks"))
         			{
            				System.exit(0);
-           				
-        			}//End of "if" statement.
-       
+        			}
+        			
 		}//End of "actionPerformed" Method.	
 		
 	private void createNetclicksMainMenu() 
@@ -74,11 +93,11 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	proMenu.addActionListener(this);
        		 	profileMenu.add(proMenu);
        		 	
-       		 	proMenu = new JMenuItem("Edit a Profile");       
+       		/*	proMenu = new JMenuItem("Edit a Profile");       
        		 	proMenu.addActionListener(this);
-       		 	profileMenu.add(proMenu);
+       		 	profileMenu.add(proMenu);	*/	
        		 	
-       		 	proMenu = new JMenuItem("Delete Profile");       
+       		 	proMenu = new JMenuItem("Delete a Profile");       
        		 	proMenu.addActionListener(this);
        		 	profileMenu.add(proMenu);
        		 	
