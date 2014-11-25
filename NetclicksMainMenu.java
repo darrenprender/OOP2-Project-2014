@@ -13,16 +13,18 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
 	public static void main(String args[])
 		{
 			NetclicksMainMenu mMFrame = new NetclicksMainMenu();
-			mMFrame.setVisible(true);
-			mMFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+//Instructions on how to add a JLabel found at: http://stackoverflow.com/questions/18027833/adding-image-to-jframe	
+			mMFrame.add(new JLabel(new ImageIcon("NetclicksLogo.png")));
+//
+			mMFrame.setVisible(true);	
 			
 		}//End of Main
 		
 	public NetclicksMainMenu()
 		{
 			setTitle("Netclicks - Main Menu");
-			setSize(400,200);
-			setResizable(true);
+			setSize(1024,768);
+			setResizable(false);
 			setLocation(500,300);
 			setDefaultCloseOperation(EXIT_ON_CLOSE);
 			
