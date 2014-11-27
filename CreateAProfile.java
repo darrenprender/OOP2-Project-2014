@@ -1,5 +1,5 @@
 
-package components;
+//package components;
 
 import java.io.*;
 import java.awt.event.*;
@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class CreateAProfile extends JFrame implements ItemListener {
 	
-	Container contentPane;
+	Container cPane;
 	
 	public static void main(String args[]) throws Exception
 		{
@@ -25,13 +25,16 @@ public class CreateAProfile extends JFrame implements ItemListener {
    
 		}
 		
-	public void CreateAProfile()
+	public  CreateAProfile()
 		{
 			setTitle("Netclicks - Create A Profile Menu");
-			setSize(1024,768);
-			setResizable(true);
-			setLocation(500,300);
+			setSize(500,400);
+			//setResizable(true);
+			setLocation(200,300);
 			setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+
+			cPane = getContentPane();
 
         	JCheckBox actionBox = new JCheckBox("Action");
     		actionBox.setMnemonic(KeyEvent.VK_C); 
@@ -68,7 +71,7 @@ public class CreateAProfile extends JFrame implements ItemListener {
     		kidsBox.setSelected(true);
     		kidsBox.addItemListener(this);
     		
-    		JPanel checkPanel = new JPanel(new GridLayout(0, 1));
+    		JPanel checkPanel = new JPanel(new GridLayout(3, 3));
         	checkPanel.add(actionBox);
         	checkPanel.add(horrorBox);
         	checkPanel.add(comedyBox);
@@ -77,7 +80,7 @@ public class CreateAProfile extends JFrame implements ItemListener {
         	checkPanel.add(sciFiBox);
         	checkPanel.add(kidsBox);
         	
-        	add(checkPanel);
+        	cPane.add(checkPanel);
         	
 		}
 		

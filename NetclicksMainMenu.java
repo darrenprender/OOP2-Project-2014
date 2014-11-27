@@ -60,11 +60,6 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
         				//Instanciate "CreateAProfile" class
         			}
         			
-        	/*	if(optionSelected.equals("Edit a Profile"))
-        			{
-        				
-        			}	*/
-        			
         		if(optionSelected.equals("Delete a Profile"))
         			{
         				
@@ -92,10 +87,6 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
         		proMenu = new JMenuItem("Create a Profile");       
        		 	proMenu.addActionListener(this);
        		 	profileMenu.add(proMenu);
-       		 	
-       		/*	proMenu = new JMenuItem("Edit a Profile");       
-       		 	proMenu.addActionListener(this);
-       		 	profileMenu.add(proMenu);	*/	
        		 	
        		 	proMenu = new JMenuItem("Delete a Profile");       
        		 	proMenu.addActionListener(this);
