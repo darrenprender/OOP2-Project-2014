@@ -19,10 +19,6 @@ public class CreateAProfile extends JFrame implements ItemListener {
 			CreateAProfile proFrame = new CreateAProfile();
 			proFrame.setVisible(true);
 			
-			JLabel jLabel = new JLabel("Please tick what movie genres you like:");
-        	proFrame.add(jLabel);
-        	
-   
 		}
 		
 	public  CreateAProfile()
@@ -32,43 +28,45 @@ public class CreateAProfile extends JFrame implements ItemListener {
 			//setResizable(true);
 			setLocation(200,300);
 			setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-
+		
 			cPane = getContentPane();
-
+			
+		//Instructions on how to add checkboxes to a Java Program found at: https://docs.oracle.com/javase/tutorial/uiswing/components/button.html
+																//And here: https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/components/CheckBoxDemoProject/src/components/CheckBoxDemo.java
+		
         	JCheckBox actionBox = new JCheckBox("Action");
     		actionBox.setMnemonic(KeyEvent.VK_C); 
-    		actionBox.setSelected(true);
+    		actionBox.setSelected(false);
     		actionBox.addItemListener(this);
     		
     		JCheckBox horrorBox = new JCheckBox("Horror");
     		horrorBox.setMnemonic(KeyEvent.VK_C); 
-    		horrorBox.setSelected(true);
+    		horrorBox.setSelected(false);
     		horrorBox.addItemListener(this);
     		
     		JCheckBox comedyBox = new JCheckBox("Comedy");
     		comedyBox.setMnemonic(KeyEvent.VK_C); 
-    		comedyBox.setSelected(true);
+    		comedyBox.setSelected(false);
     		comedyBox.addItemListener(this);
     		
     		JCheckBox dramaBox = new JCheckBox("Drama");
     		dramaBox.setMnemonic(KeyEvent.VK_C); 
-    		dramaBox.setSelected(true);
+    		dramaBox.setSelected(false);
     		dramaBox.addItemListener(this);
     		
     		JCheckBox romanceBox = new JCheckBox("Romance");
     		romanceBox.setMnemonic(KeyEvent.VK_C); 
-    		romanceBox.setSelected(true);
+    		romanceBox.setSelected(false);
     		romanceBox.addItemListener(this);
     		
     		JCheckBox sciFiBox = new JCheckBox("Sci-Fi");
     		sciFiBox.setMnemonic(KeyEvent.VK_C); 
-    		sciFiBox.setSelected(true);
+    		sciFiBox.setSelected(false);
     		sciFiBox.addItemListener(this);
     		
     		JCheckBox kidsBox = new JCheckBox("Kids");
     		kidsBox.setMnemonic(KeyEvent.VK_C); 
-    		kidsBox.setSelected(true);
+    		kidsBox.setSelected(false);
     		kidsBox.addItemListener(this);
     		
     		JPanel checkPanel = new JPanel(new GridLayout(3, 3));
@@ -80,13 +78,22 @@ public class CreateAProfile extends JFrame implements ItemListener {
         	checkPanel.add(sciFiBox);
         	checkPanel.add(kidsBox);
         	
+        	JLabel jLabel = new JLabel("Please tick what movie genres you like:");
+        	cPane.add(jLabel);
+        	
         	cPane.add(checkPanel);
         	
 		}
 		
 		
-		public void itemStateChanged(ItemEvent e)
+		public void itemStateChanged(ItemEvent event)
 			{
-				
+				boolean  actionBoxSelected;
+        		actionBoxSelected = event.getItemCommand();
+        		
+        			if(actionSelected.equals(true))
+        				{
+        							
+        				}
 			}
 }
