@@ -1,6 +1,4 @@
 
-//package components;
-
 import java.io.*;
 import java.awt.event.*;
 import java.awt.*;
@@ -89,9 +87,9 @@ public class CreateAProfile extends JFrame implements ItemListener {
 		public void itemStateChanged(ItemEvent event)
 			{
 				boolean  actionBoxSelected;
-        		actionBoxSelected = event.getItemCommand();
+        		actionBoxSelected = event.getItemSelectable();
         		
-        			if(actionSelected.equals(true))
+        			if(actionBoxSelected.equals(true))
         				{
         							
         				}

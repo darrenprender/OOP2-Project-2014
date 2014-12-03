@@ -52,22 +52,24 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
         		
         		if(optionSelected.equals("Select a Profile"))
         			{
-        				
+        				//Opens a drop down menu with Profiles
         			}
         		
-        		if(optionSelected.equals("Create a Profile"))
+        		else if(optionSelected.equals("Create a Profile"))
         			{
         				//Instanciate "CreateAProfile" class
         			}
-        			
-        		if(optionSelected.equals("Delete a Profile"))
-        			{
-        				
-        			}
         		
-        		if(optionSelected.equals("Quit Netclicks"))
+        		else if(optionSelected.equals("Quit Netclicks"))
         			{
            				System.exit(0);
+        			}
+        			
+        		else if(optionSelected.equals("Die Hard"))
+        			{
+           				JOptionPane.showMessageDialog(null, "Die HaRD");
+           				DieHard dh = new DieHard();
+           				dh.setVisible(true);
         			}
         			
 		}//End of "actionPerformed" Method.	
@@ -85,10 +87,6 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	profileMenu.add(proMenu);
         		
         		proMenu = new JMenuItem("Create a Profile");       
-       		 	proMenu.addActionListener(this);
-       		 	profileMenu.add(proMenu);
-       		 	
-       		 	proMenu = new JMenuItem("Delete a Profile");       
        		 	proMenu.addActionListener(this);
        		 	profileMenu.add(proMenu);
        		 	
@@ -119,7 +117,8 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 		
        		 			JMenuItem dieHard = new JMenuItem("Die Hard");
        		 			actionMovMenu.add(dieHard);
-       		 			
+       		 			dieHard.addActionListener(this);
+       		
        		 			JMenuItem lethalWeapon = new JMenuItem("Lethal Weapon");
        		 			actionMovMenu.add(lethalWeapon);
        		 			
@@ -215,7 +214,7 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			JMenuItem theNotebook = new JMenuItem("The Notebook");
        		 			romanceMovMenu.add(theNotebook);
        		 			
-       		 			JMenuItem dirtyDancing = new JMenuItem("dirtyDancing");
+       		 			JMenuItem dirtyDancing = new JMenuItem("Dirty Dancing");
        		 			romanceMovMenu.add(dirtyDancing);
        		 			
        		 			JMenuItem silverLiningsPlaybook = new JMenuItem("Silver Linings Playbook");
