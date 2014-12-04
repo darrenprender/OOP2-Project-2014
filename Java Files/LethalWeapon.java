@@ -17,7 +17,7 @@ public class LethalWeapon extends JFrame {
 				contentPane = getContentPane();
         		contentPane.setLayout(new FlowLayout());
         	//Instructions on how to add a JLabel found at: http://stackoverflow.com/questions/18027833/adding-image-to-jframe
-        		contentPane.add(new JLabel(new ImageIcon("lethalweapon.png")));
+        		contentPane.add(new JLabel(new ImageIcon("../Images/lethalweapon.png")));
         	//
         	
         	

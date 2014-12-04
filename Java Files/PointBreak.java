@@ -17,7 +17,7 @@ public class PointBreak extends JFrame {
 				contentPane = getContentPane();
         		contentPane.setLayout(new FlowLayout());
         	//Instructions on how to add a JLabel found at: http://stackoverflow.com/questions/18027833/adding-image-to-jframe
-        		contentPane.add(new JLabel(new ImageIcon("pointbreak.jpg")));
+        		contentPane.add(new JLabel(new ImageIcon("../Images/pointbreak.jpg")));
         	//
         	
         	

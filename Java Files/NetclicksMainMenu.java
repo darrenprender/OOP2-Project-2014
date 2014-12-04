@@ -14,7 +14,7 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
 		{
 			NetclicksMainMenu mMFrame = new NetclicksMainMenu();
 //Instructions on how to add a JLabel found at: http://stackoverflow.com/questions/18027833/adding-image-to-jframe	
-			mMFrame.add(new JLabel(new ImageIcon("NetclicksLogo.png")));
+			mMFrame.add(new JLabel(new ImageIcon("../Images/NetclicksLogo.png")));
 //
 			mMFrame.setVisible(true);	
 			
@@ -101,44 +101,6 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
            						TheBourneIdentidy tbi = new TheBourneIdentidy();
            						tbi.setVisible(true);
         					}
-        					
-        			//Instanciating Horror Movie classes	
-        					
-        				else if(optionSelected.equals("The Shining"))
-        					{
-           						JOptionPane.showMessageDialog(null, "You picked The Shining");
-           						TheShining ts = new TheShining();
-           						ts.setVisible(true);
-        					}
-        					
-        				else if(optionSelected.equals("Friday The 13th"))
-        					{
-           						JOptionPane.showMessageDialog(null, "You picked Friday The 13th");
-           						FridayThe13 ftt = new FridayThe13();
-           						ftt.setVisible(true);
-        					}
-        					
-        				else if(optionSelected.equals("Saw"))
-        					{
-           						JOptionPane.showMessageDialog(null, "You picked Saw");
-           						Saw s = new Saw();
-           						s.setVisible(true);
-        					}
-        					
-        				else if(optionSelected.equals("The Exorcist"))
-        					{
-           						JOptionPane.showMessageDialog(null, "You picked The Exorcist");
-           						TheExorcist te = new TheExorcist();
-           						te.setVisible(true);
-        					}
-        					
-        				else if(optionSelected.equals("Evil Dead 2"))
-        					{
-           						JOptionPane.showMessageDialog(null, "You picked Evil Dead 2");
-           						EvilDead2 edt = new EvilDead2();
-           						edt.setVisible(true);
-        					}				
-        					
         				
 		}//End of "actionPerformed" Method.	
 		

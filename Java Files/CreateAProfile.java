@@ -7,7 +7,10 @@ import javax.swing.*;
 public class CreateAProfile extends JFrame implements ItemListener {
 	
 	Container cPane;
+	JCheckBox actionBox;
+	JCheckBox sciFiBox;
 	
+	String profile="";
 	public static void main(String args[]) throws Exception
 		{
 			String profileName;
@@ -32,7 +35,7 @@ public class CreateAProfile extends JFrame implements ItemListener {
 		//Instructions on how to add checkboxes to a Java Program found at: https://docs.oracle.com/javase/tutorial/uiswing/components/button.html
 																//And here: https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/components/CheckBoxDemoProject/src/components/CheckBoxDemo.java
 		
-        	JCheckBox actionBox = new JCheckBox("Action");
+        	 actionBox = new JCheckBox("Action");
     		actionBox.setMnemonic(KeyEvent.VK_C); 
     		actionBox.setSelected(false);
     		actionBox.addItemListener(this);
@@ -57,15 +60,10 @@ public class CreateAProfile extends JFrame implements ItemListener {
     		romanceBox.setSelected(false);
     		romanceBox.addItemListener(this);
     		
-    		JCheckBox sciFiBox = new JCheckBox("Sci-Fi");
+    		sciFiBox = new JCheckBox("Sci-Fi");
     		sciFiBox.setMnemonic(KeyEvent.VK_C); 
     		sciFiBox.setSelected(false);
     		sciFiBox.addItemListener(this);
-    		
-    		JCheckBox kidsBox = new JCheckBox("Kids");
-    		kidsBox.setMnemonic(KeyEvent.VK_C); 
-    		kidsBox.setSelected(false);
-    		kidsBox.addItemListener(this);
     		
     		JPanel checkPanel = new JPanel(new GridLayout(3, 3));
         	checkPanel.add(actionBox);
@@ -74,7 +72,6 @@ public class CreateAProfile extends JFrame implements ItemListener {
         	checkPanel.add(dramaBox);
         	checkPanel.add(romanceBox);
         	checkPanel.add(sciFiBox);
-        	checkPanel.add(kidsBox);
         	
         	JLabel jLabel = new JLabel("Please tick what movie genres you like:");
         	cPane.add(jLabel);
@@ -86,12 +83,19 @@ public class CreateAProfile extends JFrame implements ItemListener {
 		
 		public void itemStateChanged(ItemEvent event)
 			{
-				boolean  actionBoxSelected;
+				ItemSelectable  actionBoxSelected;
         		actionBoxSelected = event.getItemSelectable();
         		
-        			if(actionBoxSelected.equals(true))
+        			if(actionBoxSelected == actionBox)
         				{
-        							
+        					profile+="Action \n";
+        					JOptionPane.showMessageDialog(null, profile);			
+        				}
+        				
+        				else if(actionBoxSelected == sciFiBox)
+        				{
+        					profile+="SciFi \n";
+        					JOptionPane.showMessageDialog(null, profile);			
         				}
 			}
 }
