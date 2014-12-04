@@ -65,13 +65,81 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
            				System.exit(0);
         			}
         			
-        		else if(optionSelected.equals("Die Hard"))
-        			{
-           				JOptionPane.showMessageDialog(null, "Die HaRD");
-           				DieHard dh = new DieHard();
-           				dh.setVisible(true);
-        			}
+        			//Instanciating Action Movie classes
         			
+        				else if(optionSelected.equals("Die Hard"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked Die Hard");
+           						DieHard dh = new DieHard();
+           						dh.setVisible(true);
+        					}
+        				
+        				else if(optionSelected.equals("Lethal Weapon"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked Lethal Weapon");
+           						LethalWeapon lw = new LethalWeapon();
+           						lw.setVisible(true);
+        					}
+        					
+        				else if(optionSelected.equals("Point Break"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked Point Break");
+           						PointBreak pb = new PointBreak();
+           						pb.setVisible(true);
+        					}
+        					
+        				else if(optionSelected.equals("The Matrix"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked The Matrix");
+           						TheMatrix tm = new TheMatrix();
+           						tm.setVisible(true);
+        					}
+        					
+        				else if(optionSelected.equals("The Bourne Identidy"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked The Bourne Identidy");
+           						TheBourneIdentidy tbi = new TheBourneIdentidy();
+           						tbi.setVisible(true);
+        					}
+        					
+        			//Instanciating Horror Movie classes	
+        					
+        				else if(optionSelected.equals("The Shining"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked The Shining");
+           						TheShining ts = new TheShining();
+           						ts.setVisible(true);
+        					}
+        					
+        				else if(optionSelected.equals("Friday The 13th"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked Friday The 13th");
+           						FridayThe13 ftt = new FridayThe13();
+           						ftt.setVisible(true);
+        					}
+        					
+        				else if(optionSelected.equals("Saw"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked Saw");
+           						Saw s = new Saw();
+           						s.setVisible(true);
+        					}
+        					
+        				else if(optionSelected.equals("The Exorcist"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked The Exorcist");
+           						TheExorcist te = new TheExorcist();
+           						te.setVisible(true);
+        					}
+        					
+        				else if(optionSelected.equals("Evil Dead 2"))
+        					{
+           						JOptionPane.showMessageDialog(null, "You picked Evil Dead 2");
+           						EvilDead2 edt = new EvilDead2();
+           						edt.setVisible(true);
+        					}				
+        					
+        				
 		}//End of "actionPerformed" Method.	
 		
 	private void createNetclicksMainMenu() 
@@ -121,15 +189,19 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		
        		 			JMenuItem lethalWeapon = new JMenuItem("Lethal Weapon");
        		 			actionMovMenu.add(lethalWeapon);
+       		 			lethalWeapon.addActionListener(this);
        		 			
        		 			JMenuItem pointBreak = new JMenuItem("Point Break");
        		 			actionMovMenu.add(pointBreak);
+       		 			pointBreak.addActionListener(this);
        		 			
        		 			JMenuItem theMatrix = new JMenuItem("The Matrix");
        		 			actionMovMenu.add(theMatrix);
+       		 			theMatrix.addActionListener(this);
        		 			
        		 			JMenuItem theBourneIdentidy = new JMenuItem("The Bourne Identidy");
        		 			actionMovMenu.add(theBourneIdentidy);
+       		 			theBourneIdentidy.addActionListener(this);
        		 			
        		 		//End "Action" Submenu
        		 	
@@ -141,18 +213,23 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 			
        		 			JMenuItem theShining = new JMenuItem("The Shining");
        		 			horrorMovMenu.add(theShining);
+       		 			theShining.addActionListener(this);
        		 			
        		 			JMenuItem fridayThe13 = new JMenuItem("Friday the 13th");
        		 			horrorMovMenu.add(fridayThe13);
+       		 			fridayThe13.addActionListener(this);
        		 			
        		 			JMenuItem saw = new JMenuItem("Saw");
        		 			horrorMovMenu.add(saw);
+       		 			saw.addActionListener(this);
        		 		
        		 			JMenuItem theExorcist = new JMenuItem("The Exorcist");
        		 			horrorMovMenu.add(theExorcist);
+       		 			theExorcist.addActionListener(this);
        		 			
-       		 			JMenuItem evilDead = new JMenuItem("Evil Dead");
-       		 			horrorMovMenu.add(evilDead);
+       		 			JMenuItem evilDead2 = new JMenuItem("Evil Dead 2");
+       		 			horrorMovMenu.add(evilDead2);
+       		 			evilDead2.addActionListener(this);
        		 			
        		 		//End of "Horror" Submenu	
        		 	
@@ -164,18 +241,23 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	
        		 			JMenuItem theHangover = new JMenuItem("The Hangover");
        		 			comedyMovMenu.add(theHangover);
+       		 			theHangover.addActionListener(this);
        		 			
        		 			JMenuItem anchorman = new JMenuItem("Anchorman");
        		 			comedyMovMenu.add(anchorman);
+       		 			anchorman.addActionListener(this);
        		 			
        		 			JMenuItem dumbAndDumber = new JMenuItem("Dumb and Dumber");
        		 			comedyMovMenu.add(dumbAndDumber);
+       		 			dumbAndDumber.addActionListener(this);
        		 			
        		 			JMenuItem superbad = new JMenuItem("Superbad");
        		 			comedyMovMenu.add(superbad);
+       		 			superbad.addActionListener(this);
        		 			
        		 			JMenuItem shaunOfTheDead = new JMenuItem("Shaun of the Dead");
        		 			comedyMovMenu.add(shaunOfTheDead);
+       		 			shaunOfTheDead.addActionListener(this);
        		 			
        		 		//End of "Comedies" SubMenu
        		 	
@@ -187,18 +269,23 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	
        		 			JMenuItem shawshankRedemption = new JMenuItem("Shawshank Redemption");
        		 			dramaMovMenu.add(shawshankRedemption);
+       		 			shawshankRedemption.addActionListener(this);
        		 			
        		 			JMenuItem forestGump = new JMenuItem("Forest Gump");
        		 			dramaMovMenu.add(forestGump);
+       		 			forestGump.addActionListener(this);
        		 			
        		 			JMenuItem captainPhilips = new JMenuItem("Captain Philips");
        		 			dramaMovMenu.add(captainPhilips);
+       		 			captainPhilips.addActionListener(this);
        		 			
        		 			JMenuItem shindlersList = new JMenuItem("Shindler's List");
        		 			dramaMovMenu.add(shindlersList);
+       		 			shindlersList.addActionListener(this);
        		 			
        		 			JMenuItem fightClub = new JMenuItem("Fight Club");
        		 			dramaMovMenu.add(fightClub);
+       		 			fightClub.addActionListener(this);
        		 		
        		 		//End of "Drama" SubMenu
        		 	
@@ -210,18 +297,23 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	
        		 			JMenuItem titanic = new JMenuItem("Titanic");
        		 			romanceMovMenu.add(titanic);
+       		 			titanic.addActionListener(this);
        		 			
        		 			JMenuItem theNotebook = new JMenuItem("The Notebook");
        		 			romanceMovMenu.add(theNotebook);
+       		 			theNotebook.addActionListener(this);
        		 			
        		 			JMenuItem dirtyDancing = new JMenuItem("Dirty Dancing");
        		 			romanceMovMenu.add(dirtyDancing);
+       		 			dirtyDancing.addActionListener(this);
        		 			
        		 			JMenuItem silverLiningsPlaybook = new JMenuItem("Silver Linings Playbook");
        		 			romanceMovMenu.add(silverLiningsPlaybook);
+       		 			silverLiningsPlaybook.addActionListener(this);
        		 			
        		 			JMenuItem forgettingSarahMarshall = new JMenuItem("Forgetting Sarah Marshall");
        		 			romanceMovMenu.add(forgettingSarahMarshall);
+       		 			forgettingSarahMarshall.addActionListener(this);
        		 			
        		 		//End of "Romance" SubMenu
        		 	
@@ -233,43 +325,25 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	
        		 			JMenuItem alien = new JMenuItem("Alien");
        		 			sciFiMovMenu.add(alien);
+       		 			alien.addActionListener(this);
        		 			
        		 			JMenuItem planetOfTheApes = new JMenuItem("Planet Of The Apes");
        		 			sciFiMovMenu.add(planetOfTheApes);
+       		 			planetOfTheApes.addActionListener(this);
        		 			
        		 			JMenuItem starWars = new JMenuItem("Star Wars");
        		 			sciFiMovMenu.add(starWars);
+       		 			starWars.addActionListener(this);
        		 			
        		 			JMenuItem backToTheFuture = new JMenuItem("Back To The Future");
        		 			sciFiMovMenu.add(backToTheFuture);
+       		 			backToTheFuture.addActionListener(this);
        		 			
        		 			JMenuItem avatar = new JMenuItem("Avatar");
        		 			sciFiMovMenu.add(avatar);
+       		 			avatar.addActionListener(this);
        		 			
        		 		//End of "Science Fiction" SubMenu
-       		 	
-       		 	kidsMovMenu = new JMenu("Kids");
-       		 	kidsMovMenu.addActionListener(this);
-       		 	movieMenu.add(kidsMovMenu);
-       		 	
-       		 		//"Kids" SubMenu
-       		 	
-       		 			JMenuItem toyStory = new JMenuItem("Toy Story");
-       		 			kidsMovMenu.add(toyStory);
-       		 			
-       		 			JMenuItem findingNemo = new JMenuItem("Finding Nemo");
-       		 			kidsMovMenu.add(findingNemo);
-       		 			
-       		 			JMenuItem theLionKing = new JMenuItem("The Lion King");
-       		 			kidsMovMenu.add(theLionKing);
-       		 			
-       		 			JMenuItem iceAge = new JMenuItem("Ice Age");
-       		 			kidsMovMenu.add(iceAge);
-       		 			
-       		 			JMenuItem frozen = new JMenuItem("Frozen");
-       		 			kidsMovMenu.add(frozen);
-       		 			
-       		 		//End of "Kids" Submenu
         		
 			}//End of "createNetclicksMainMenu" Method		 
 		
