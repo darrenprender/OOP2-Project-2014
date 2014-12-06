@@ -8,6 +8,10 @@ public class CreateAProfile extends JFrame implements ItemListener {
 	
 	Container cPane;
 	JCheckBox actionBox;
+	JCheckBox horrorBox;
+	JCheckBox romanceBox;
+	JCheckBox dramaBox;
+	JCheckBox comedyBox;
 	JCheckBox sciFiBox;
 	
 	String profile="";
@@ -35,27 +39,27 @@ public class CreateAProfile extends JFrame implements ItemListener {
 		//Instructions on how to add checkboxes to a Java Program found at: https://docs.oracle.com/javase/tutorial/uiswing/components/button.html
 																//And here: https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/components/CheckBoxDemoProject/src/components/CheckBoxDemo.java
 		
-        	 actionBox = new JCheckBox("Action");
+        	actionBox = new JCheckBox("Action");
     		actionBox.setMnemonic(KeyEvent.VK_C); 
     		actionBox.setSelected(false);
     		actionBox.addItemListener(this);
     		
-    		JCheckBox horrorBox = new JCheckBox("Horror");
+    		horrorBox = new JCheckBox("Horror");
     		horrorBox.setMnemonic(KeyEvent.VK_C); 
     		horrorBox.setSelected(false);
     		horrorBox.addItemListener(this);
     		
-    		JCheckBox comedyBox = new JCheckBox("Comedy");
+    		comedyBox = new JCheckBox("Comedy");
     		comedyBox.setMnemonic(KeyEvent.VK_C); 
     		comedyBox.setSelected(false);
     		comedyBox.addItemListener(this);
     		
-    		JCheckBox dramaBox = new JCheckBox("Drama");
+    		dramaBox = new JCheckBox("Drama");
     		dramaBox.setMnemonic(KeyEvent.VK_C); 
     		dramaBox.setSelected(false);
     		dramaBox.addItemListener(this);
     		
-    		JCheckBox romanceBox = new JCheckBox("Romance");
+    		romanceBox = new JCheckBox("Romance");
     		romanceBox.setMnemonic(KeyEvent.VK_C); 
     		romanceBox.setSelected(false);
     		romanceBox.addItemListener(this);
@@ -88,14 +92,14 @@ public class CreateAProfile extends JFrame implements ItemListener {
         		
         			if(actionBoxSelected == actionBox)
         				{
-        					profile+="Action \n";
+        					profile += "Action";
         					JOptionPane.showMessageDialog(null, profile);			
         				}
         				
         				else if(actionBoxSelected == sciFiBox)
-        				{
-        					profile+="SciFi \n";
-        					JOptionPane.showMessageDialog(null, profile);			
-        				}
+        					{
+        						profile += "SciFi \n";
+        						JOptionPane.showMessageDialog(null, profile);			
+        					}
 			}
 }

@@ -58,6 +58,8 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
         		else if(optionSelected.equals("Create a Profile"))
         			{
         				//Instanciate "CreateAProfile" class
+        				CreateAProfile cap = new CreateAProfile();
+        				cap.setVisible(true);
         			}
         		
         		else if(optionSelected.equals("Quit Netclicks"))
