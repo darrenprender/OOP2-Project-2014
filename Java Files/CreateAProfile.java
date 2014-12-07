@@ -14,20 +14,15 @@ public class CreateAProfile extends JFrame implements ItemListener {
 	JCheckBox comedyBox;
 	JCheckBox sciFiBox;
 	
-	String profile="";
-	public static void main(String args[]) throws Exception
-		{
-			String profileName;
-			
-			profileName = JOptionPane.showInputDialog("Please enter your Profile Name");
-		
-			CreateAProfile proFrame = new CreateAProfile();
-			proFrame.setVisible(true);
-			
-		}
+	String profile = "";
+	String profileName;
+	
+	//Profile [] profo; 
 		
 	public  CreateAProfile()
 		{
+			profileName = JOptionPane.showInputDialog("Please enter your Profile Name");
+	
 			setTitle("Netclicks - Create A Profile Menu");
 			setSize(500,400);
 			//setResizable(true);
@@ -80,6 +75,9 @@ public class CreateAProfile extends JFrame implements ItemListener {
         	JLabel jLabel = new JLabel("Please tick what movie genres you like:");
         	cPane.add(jLabel);
         	
+        	JButton saveButton = new JButton("Save");
+        	cPane.add(saveButton);
+        	
         	cPane.add(checkPanel);
         	
 		}
@@ -87,19 +85,77 @@ public class CreateAProfile extends JFrame implements ItemListener {
 		
 		public void itemStateChanged(ItemEvent event)
 			{
-				ItemSelectable  actionBoxSelected;
-        		actionBoxSelected = event.getItemSelectable();
+				ItemSelectable  checkBoxSelected;
+        		checkBoxSelected = event.getItemSelectable();
         		
-        			if(actionBoxSelected == actionBox)
+        			if(checkBoxSelected == actionBox)
         				{
-        					profile += "Action";
+        					profile = "You picked Action Movies";
         					JOptionPane.showMessageDialog(null, profile);			
         				}
         				
-        				else if(actionBoxSelected == sciFiBox)
+        				else if(checkBoxSelected == sciFiBox)
         					{
-        						profile += "SciFi \n";
+        						profile = "You picked Sci-Fi Movies";
         						JOptionPane.showMessageDialog(null, profile);			
         					}
-			}
+        					
+        				else if(checkBoxSelected == horrorBox)
+        					{
+        						profile = "You picked Horror Movies";
+        						JOptionPane.showMessageDialog(null, profile);			
+        					}
+        					
+        				else if(checkBoxSelected == dramaBox)
+        					{
+        						profile = "You picked Dramatic Movies";
+        						JOptionPane.showMessageDialog(null, profile);			
+        					}
+        					
+        				else if(checkBoxSelected == romanceBox)
+        					{
+        						profile = "You picked Romantic Movies";
+        						JOptionPane.showMessageDialog(null, profile);			
+        					}
+        					
+        				else if(checkBoxSelected == comedyBox)
+        					{
+        						profile = "You picked Comedy Movies";
+        						JOptionPane.showMessageDialog(null, profile);			
+        					}
+        					
+        //Bicycle.java and BicycleFrame.java used as an example for this next bit involving arrays
+        					
+       /* 	public void newSystem()
+        		{
+      				profo = new Profile[1];
+			    }
+			    
+			public void save() throws IOException
+				{
+      				ObjectOutputStream oos;
+      				oos = new ObjectOutputStream(new FileOutputStream ("profo1.dat"));
+      				oos.writeObject(profo1);
+      				oos.close();
+      			}
+      			
+      		public void open()
+      			{
+      	  			try
+      	  				{
+      	  					ObjectInputStream ois;
+      	  					ois = new ObjectInputStream(new FileInputStream ("profo1.dat"));
+         					bikes  = (Bicycle []) is.readObject();
+      	  					ois.close();
+      	  				} 
+      			}
+      			
+      				catch(Exception e)
+      					{
+      						JOptionPane.showMessageDialog(null,"open didn't work");
+      						e.printStackTrace();
+      					}
+      					
+      }*/
+	}
 }
