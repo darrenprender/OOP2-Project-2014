@@ -114,9 +114,13 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
 				JMenuItem proMenu;
         		profileMenu = new JMenu("Profiles");
         		
-        		proMenu = new JMenuItem("Select a Profile");       
+        		proMenu = new JMenu("Select a Profile");       
        		 	proMenu.addActionListener(this);
        		 	profileMenu.add(proMenu);
+       		 	
+       		 			JMenuItem profile1 = new JMenuItem("Darren");
+       		 			proMenu.add(profile1);
+       		 			profile1.addActionListener(this);
         		
         		proMenu = new JMenuItem("Create a Profile");       
        		 	proMenu.addActionListener(this);
@@ -132,6 +136,7 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 
        		 //Creating the "Movies" JMenu
        		 	
+       		 	movieMenu = new JMenu("Movies");
        		 	JMenuItem actionMovMenu;
        		 	JMenuItem horrorMovMenu;
        		 	JMenuItem comedyMovMenu;
@@ -139,7 +144,6 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
        		 	JMenuItem romanceMovMenu;
        		 	JMenuItem sciFiMovMenu;
        		 	JMenuItem kidsMovMenu;
-       		 	movieMenu = new JMenu("Movies");
        		 	
        		 	actionMovMenu = new JMenu("Action");
        		 	actionMovMenu.addActionListener(this);

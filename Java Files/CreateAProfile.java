@@ -4,7 +4,7 @@ import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 
-public class CreateAProfile extends JFrame implements ItemListener {
+public class CreateAProfile extends JFrame implements ItemListener, ActionListener {
 	
 	Container cPane;
 	JCheckBox actionBox;
@@ -64,22 +64,54 @@ public class CreateAProfile extends JFrame implements ItemListener {
     		sciFiBox.setSelected(false);
     		sciFiBox.addItemListener(this);
     		
-    		JPanel checkPanel = new JPanel(new GridLayout(3, 3));
+    		JButton saveButton = new JButton("Save");
+    		saveButton.setSize(50, 50);
+    		
+    //Instructions on how to use an action listener with a JButton found at: http://stackoverflow.com/questions/17511789/button-actionlistener
+    																  //and: 
+    		saveButton.addActionListener(new ActionListener()
+    			{
+            			@Override
+            		
+            			public void actionPerformed(ActionEvent event)
+							{
+        						String  actionPerformed;
+        						actionPerformed = event.getActionCommand();
+        		
+        						if(actionPerformed.equals("Save"))
+        							{
+        								JOptionPane.showMessageDialog(null, "This profile has been saved");
+        								System.exit(0);
+        							}
+							}
+    			});
+    		
+    		JLabel jLabel = new JLabel("Please tick what movie genres you like:");
+        	cPane.add(jLabel);
+
+    		JPanel checkPanel = new JPanel(new GridLayout(4, 3));
+        	checkPanel.add(jLabel);
         	checkPanel.add(actionBox);
         	checkPanel.add(horrorBox);
         	checkPanel.add(comedyBox);
         	checkPanel.add(dramaBox);
         	checkPanel.add(romanceBox);
         	checkPanel.add(sciFiBox);
-        	
-        	JLabel jLabel = new JLabel("Please tick what movie genres you like:");
-        	cPane.add(jLabel);
-        	
-        	JButton saveButton = new JButton("Save");
-        	cPane.add(saveButton);
-        	
+        	checkPanel.add(saveButton);
+       
         	cPane.add(checkPanel);
         	
+		}
+		
+		public void actionPerformed(ActionEvent event)
+		{
+        	String  actionPerformed;
+        	actionPerformed = event.getActionCommand();
+        		
+        		if(actionPerformed.equals("Save"))
+        			{
+        				JOptionPane.showMessageDialog(null, "This profile has been saved");
+        			}
 		}
 		
 		
