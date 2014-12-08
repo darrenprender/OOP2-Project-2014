@@ -194,5 +194,3 @@ public class CreateAProfile extends JFrame implements ItemListener, ActionListen
       					}
       					
       }Yeah... I couldn't get it to work :P */ 
-	}
-}
