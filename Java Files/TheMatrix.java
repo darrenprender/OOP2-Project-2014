@@ -18,7 +18,7 @@ public class TheMatrix extends JFrame {
         		contentPane.setLayout(new FlowLayout());
         	//Instructions on how to add a JLabel found at: http://stackoverflow.com/questions/18027833/adding-image-to-jframe
         		contentPane.add(new JLabel(new ImageIcon("../Images/thematrix.jpg")));
-        	//
+        	//End of [non-original or refactored] code
         	
         	
 			}

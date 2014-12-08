@@ -15,7 +15,7 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
 			NetclicksMainMenu mMFrame = new NetclicksMainMenu();
 //Instructions on how to add a JLabel found at: http://stackoverflow.com/questions/18027833/adding-image-to-jframe	
 			mMFrame.add(new JLabel(new ImageIcon("../Images/NetclicksLogo.png")));
-//
+//End of [non-original or refactored] code
 			mMFrame.setVisible(true);	
 			
 		}//End of Main
