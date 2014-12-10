@@ -1,4 +1,6 @@
 
+//CreateAProfile.java
+
 import java.io.*;
 import java.awt.event.*;
 import java.awt.*;
@@ -68,7 +70,7 @@ public class CreateAProfile extends JFrame implements ItemListener, ActionListen
     		saveButton.setSize(50, 50);
     		
     //Instructions on how to use an action listener with a JButton found at: http://stackoverflow.com/questions/17511789/button-actionlistener
-    																  //and: 
+    
     		saveButton.addActionListener(new ActionListener()
     			{
             			@Override
@@ -85,7 +87,8 @@ public class CreateAProfile extends JFrame implements ItemListener, ActionListen
         							}
 							}
     			});
-    		
+    //End of [non-original or refactored] code
+    
     		JLabel jLabel = new JLabel("Please tick what movie genres you like:");
         	cPane.add(jLabel);
 
@@ -156,6 +159,10 @@ public class CreateAProfile extends JFrame implements ItemListener, ActionListen
         						JOptionPane.showMessageDialog(null, profile);			
         					}
         					
+        	//End of [non-original or refactored] code
+        	}
+	}
+        					
         //Bicycle.java and BicycleFrame.java used as an example for this next bit involving arrays
         					
        /* 	public void newSystem()
@@ -188,6 +195,4 @@ public class CreateAProfile extends JFrame implements ItemListener, ActionListen
       						e.printStackTrace();
       					}
       					
-      }*/
-	}
-}
+      }Yeah... I couldn't get it to work :P */ 

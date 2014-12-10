@@ -1,4 +1,6 @@
 
+//NetclicksMainMenu.java
+
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
@@ -15,7 +17,7 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
 			NetclicksMainMenu mMFrame = new NetclicksMainMenu();
 //Instructions on how to add a JLabel found at: http://stackoverflow.com/questions/18027833/adding-image-to-jframe	
 			mMFrame.add(new JLabel(new ImageIcon("../Images/NetclicksLogo.png")));
-//
+//End of [non-original or refactored] code
 			mMFrame.setVisible(true);	
 			
 		}//End of Main
@@ -50,9 +52,9 @@ public class NetclicksMainMenu extends JFrame implements ActionListener {
         	String  optionSelected;
         	optionSelected = event.getActionCommand();
         		
-        		if(optionSelected.equals("Select a Profile"))
+        		if(optionSelected.equals("Darren"))
         			{
-        				//Opens a drop down menu with Profiles
+        				JOptionPane.showMessageDialog(null, "Profile: Darren selected");
         			}
         		
         		else if(optionSelected.equals("Create a Profile"))
